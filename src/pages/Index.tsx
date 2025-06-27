@@ -18,7 +18,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 font-oswald">
+    <div className="min-h-screen font-oswald">
       {/* Header */}
       <header className="bg-white shadow-lg">
         <div className="container mx-auto px-4 py-4">
@@ -32,7 +32,7 @@ const Index = () => {
                   KC TRANSPORT
                 </h1>
                 <p className="text-blue-900 font-semibold uppercase text-sm tracking-wide">
-                  Fleet Owners & Commission Agents
+                  Transport Contractor & Commission Agents
                 </p>
               </div>
             </div>
@@ -57,13 +57,13 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-red-600/20"></div>
+        <div className="absolute inset-0 bg-[url(/truck1.jpg)] bg-cover bg-bottom"></div>
         <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white">
+          <div className="max-w-4xl mx-auto text-center text-blue-900">
             <h2 className="text-5xl md:text-7xl font-bold uppercase mb-6 leading-tight">
               SAFE & ON TIME
-              <span className="block text-red-400">CARGO TRANSPORT</span>
-              <span className="block text-yellow-400">SERVICES</span>
+              <span className="block text-red-600">CARGO TRANSPORT</span>
+              <span className="block text-yellow-500">SERVICES</span>
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto">
               Daily cargo transport services across major states in India. 
@@ -126,11 +126,11 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
+            <div className="bg-gray-100 p-4 rounded-lg">
               <img 
-                src="/lovable-uploads/a1be7436-dd6b-43a3-9b63-048b931e4ce3.png" 
+                src="/truck2.jpg" 
                 alt="KC Transport Fleet" 
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-lg"
               />
             </div>
           </div>
@@ -244,6 +244,14 @@ const Index = () => {
                     >
                       kctransport786@gmail.com
                     </Button>
+                    <br />
+                    <Button 
+                      variant="link" 
+                      className="text-lg font-bold text-red-600 p-0 h-auto"
+                      onClick={handleEmail}
+                    >
+                      ankitchadgal290@gmail.com
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -296,7 +304,7 @@ const Index = () => {
           <div className="text-center">
             <h4 className="text-2xl font-bold uppercase mb-4">KC TRANSPORT</h4>
             <p className="text-yellow-400 font-semibold uppercase mb-4">
-              Fleet Owners & Commission Agents
+              Transport Contractor & Commission Agents
             </p>
             <p className="text-gray-300 mb-4">
               Daily cargo transport services across India | Safe & On Time Delivery
@@ -304,7 +312,7 @@ const Index = () => {
             <div className="flex justify-center space-x-8 text-sm">
               <span>Contact: Ankit</span>
               <span>7006069502 | 8082176534</span>
-              <span>kctransport786@gmail.com</span>
+              <span>kctransport786@gmail.com | ankitchadgal290@gmail.com</span>
             </div>
           </div>
         </div>
