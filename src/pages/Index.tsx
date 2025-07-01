@@ -70,8 +70,8 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="bg-accent-green p-3 rounded-lg">
-                <Truck className="w-8 h-8 text-dark-primary" />
+              <div className="w-[3rem] overflow-hidden rounded-lg">
+                <img className="w-full" src="/logo.png" alt="logo" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white uppercase tracking-wider">
@@ -157,7 +157,7 @@ const Index = () => {
                 <Button
                   onClick={() => handleCallNow("7006069502")}
                   variant="outline"
-                  className="border-2 border-white/20 text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg transition-all"
+                  className="border-2 border-white/20 text-black hover:bg-white/10 hover:text-white text-lg px-8 py-4 rounded-lg transition-all"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
