@@ -8,10 +8,10 @@ import {
   Clock,
   Users,
   ArrowRight,
+  CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useEffect, useState } from "react";
 
 const Index = () => {
   const handleCallNow = (phone: string) => {
@@ -64,20 +64,20 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-dark-primary overflow-x-hidden">
       {/* Fixed Header */}
-      <header className="fixed top-0 w-full z-50 bg-primary-blue border-b-2 border-accent-red">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+      <header className="fixed top-0 w-full z-50 bg-dark-primary/90 backdrop-blur-md border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="bg-accent-red p-3 rounded">
-                <Truck className="w-8 h-8 text-white" />
+              <div className="bg-accent-green p-3 rounded-lg">
+                <Truck className="w-8 h-8 text-dark-primary" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-white font-barlow uppercase tracking-wider">
+                <h1 className="text-2xl font-bold text-white uppercase tracking-wider">
                   KC TRANSPORT
                 </h1>
-                <p className="text-white/80 text-sm font-dm-sans">
+                <p className="text-white/60 text-sm">
                   Transport Contractor & Commission Agents
                 </p>
               </div>
@@ -86,25 +86,25 @@ const Index = () => {
             <nav className="hidden lg:flex items-center space-x-8">
               <a
                 href="#home"
-                className="text-white hover:text-accent-red transition-colors font-barlow uppercase"
+                className="text-white hover:text-accent-green transition-colors text-lg"
               >
                 Home
               </a>
               <a
                 href="#about"
-                className="text-white hover:text-accent-red transition-colors font-barlow uppercase"
+                className="text-white hover:text-accent-green transition-colors text-lg"
               >
                 About
               </a>
               <a
                 href="#services"
-                className="text-white hover:text-accent-red transition-colors font-barlow uppercase"
+                className="text-white hover:text-accent-green transition-colors text-lg"
               >
                 Services
               </a>
               <a
                 href="#contact"
-                className="text-white hover:text-accent-red transition-colors font-barlow uppercase"
+                className="text-white hover:text-accent-green transition-colors text-lg"
               >
                 Contact
               </a>
@@ -113,9 +113,9 @@ const Index = () => {
             <div className="hidden md:flex space-x-4">
               <Button
                 onClick={() => handleCallNow("7006069502")}
-                className="bg-accent-red hover:bg-red-700 text-white font-barlow uppercase"
+                className="bg-accent-green hover:bg-accent-green/90 text-dark-primary font-semibold px-6 py-3 rounded-lg transition-all"
               >
-                Call Now
+                Let's Talk
               </Button>
             </div>
           </div>
@@ -123,121 +123,178 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center">
-        <div className="absolute inset-0 bg-[url(/truck1.jpg)] bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-black/50"></div>
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center pt-20"
+      >
+        <div className="absolute inset-0 bg-[url(/truck1.jpg)] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-primary/90 via-dark-primary/80 to-dark-secondary/90"></div>
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h2 className="text-5xl md:text-7xl font-bold text-white font-barlow uppercase leading-tight mb-6">
-              Safe & On Time
-              <span className="block text-accent-red">Cargo Transport</span>
-              <span className="block">Services</span>
-            </h2>
-            <p className="text-xl text-white/90 font-dm-sans mb-8 leading-relaxed">
-              Daily Service for: Punjab, Haryana, Chandigarh, Delhi, UP,
-              Uttaranchal, Bihar, Kolkata, Assam, Gujarat & All over India.
-            </p>
-            <Button
-              onClick={handleEmail}
-              className="bg-accent-red hover:bg-red-700 text-white font-barlow uppercase text-lg px-8 py-4"
-            >
-              Get A Free Quote
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-accent-red font-barlow font-bold uppercase text-sm tracking-wider">
-                - 01
-              </span>
-              <h3 className="text-5xl font-bold text-primary-blue font-barlow uppercase mb-8 leading-tight">
-                About Us
-              </h3>
-              <p className="text-gray-700 font-dm-sans text-lg leading-relaxed mb-6">
-                KC TRANSPORT - Transport Contractor & Commission Agents
-                providing daily service for Punjab, Haryana, Chandigarh, Delhi,
-                UP, Uttaranchal, Bihar, Kolkata, Assam, Gujarat & All over
-                India.
+              <div className="mb-8">
+                <span className="text-accent-green text-lg font-semibold tracking-wider uppercase">
+                  Transport Services
+                </span>
+              </div>
+              <h2 className="text-6xl md:text-8xl font-bold text-white leading-tight mb-8">
+                SAFE &<span className="block text-accent-green">ON TIME</span>
+                <span className="block">CARGO</span>
+              </h2>
+              <p className="text-xl text-white/80 mb-12 leading-relaxed max-w-xl">
+                Daily Service for: Punjab, Haryana, Chandigarh, Delhi, UP,
+                Uttaranchal, Bihar, Kolkata, Assam, Gujarat & All over India.
               </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-accent-red rounded flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-dm-sans font-semibold">
-                    Safe Transport
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-accent-red rounded flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-dm-sans font-semibold">
-                    On Time Delivery
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-accent-red rounded flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-dm-sans font-semibold">
-                    Direct Handling
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-accent-red rounded flex items-center justify-center">
-                    <Star className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-dm-sans font-semibold">
-                    Trusted Service
-                  </span>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Button
+                  onClick={handleEmail}
+                  className="bg-accent-green hover:bg-accent-green/90 text-dark-primary font-semibold text-lg px-8 py-4 rounded-lg transition-all"
+                >
+                  Get A Free Quote
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button
+                  onClick={() => handleCallNow("7006069502")}
+                  variant="outline"
+                  className="border-2 border-white/20 text-white hover:bg-white/10 text-lg px-8 py-4 rounded-lg transition-all"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
+                </Button>
               </div>
             </div>
-            <div>
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-accent-green/20 rounded-full blur-3xl animate-pulse"></div>
               <img
                 src="/truck2.jpg"
                 alt="KC Transport Fleet"
-                className="w-full h-96 object-cover rounded"
+                className="relative z-10 w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-32 bg-gray-50">
+      {/* Large Typography Section */}
+      <section className="py-20 overflow-hidden">
+        <div className="text-center">
+          <h2 className="text-8xl md:text-[160px] font-bold text-white leading-none mb-4">
+            TRANSPORT
+          </h2>
+          <h3 className="text-6xl md:text-[120px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-green to-accent-green/50 leading-none">
+            SOLUTIONS
+          </h3>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-32 bg-dark-secondary/30">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="text-accent-red font-barlow font-bold uppercase text-sm tracking-wider">
-              - 02
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-accent-green/10 rounded-full blur-2xl"></div>
+              <div className="relative bg-dark-secondary rounded-2xl p-8 border border-white/10">
+                <img
+                  src="/truck2.jpg"
+                  alt="KC Transport Fleet"
+                  className="w-full h-80 object-cover rounded-xl"
+                />
+              </div>
+            </div>
+
+            <div>
+              <span className="text-accent-green text-lg font-semibold tracking-wider uppercase mb-4 block">
+                About Company
+              </span>
+              <h3 className="text-5xl font-bold text-white mb-8 leading-tight">
+                Our Main Goal to Satisfy Local & Global Clients
+              </h3>
+              <p className="text-white/80 text-lg leading-relaxed mb-12">
+                KC TRANSPORT - Transport Contractor & Commission Agents
+                providing daily service for Punjab, Haryana, Chandigarh, Delhi,
+                UP, Uttaranchal, Bihar, Kolkata, Assam, Gujarat & All over
+                India.
+              </p>
+
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { icon: Shield, text: "Safe Transport" },
+                  { icon: Clock, text: "On Time Delivery" },
+                  { icon: Users, text: "Direct Handling" },
+                  { icon: Star, text: "Trusted Service" },
+                ].map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center space-x-4 p-4 bg-dark-secondary/50 rounded-xl border border-white/10 hover:border-accent-green/30 transition-all"
+                  >
+                    <div className="w-12 h-12 bg-accent-green rounded-lg flex items-center justify-center">
+                      <feature.icon className="w-6 h-6 text-dark-primary" />
+                    </div>
+                    <span className="text-white font-semibold">
+                      {feature.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-32">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            {[
+              { number: "500+", label: "PROJECTS", accent: true },
+              { number: "15+", label: "YEARS" },
+              { number: "50+", label: "CITIES" },
+            ].map((stat, index) => (
+              <div key={index} className="space-y-4">
+                <CheckCircle className="w-8 h-8 text-accent-green mx-auto mb-4" />
+                <div
+                  className={`text-8xl font-bold ${stat.accent ? "text-accent-green" : "text-white"}`}
+                >
+                  {stat.number}
+                </div>
+                <div className="text-white/80 text-lg tracking-wider font-semibold">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-32 bg-dark-secondary/30">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-20">
+            <span className="text-accent-green text-lg font-semibold tracking-wider uppercase mb-4 block">
+              All Services
             </span>
-            <h3 className="text-5xl font-bold text-primary-blue font-barlow uppercase mb-8">
-              Our Services
-            </h3>
+            <h3 className="text-5xl font-bold text-white mb-8">Our Services</h3>
+            <p className="text-white/80 text-lg max-w-3xl mx-auto">
+              Comprehensive Transport Services to Power Your Business Growth
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-dark-secondary border border-white/10 hover:border-accent-green/30 transition-all group"
               >
                 <CardContent className="p-8 text-center">
-                  <div className="w-20 h-20 bg-accent-red rounded mx-auto mb-6 flex items-center justify-center">
-                    <service.icon className="w-10 h-10 text-white" />
+                  <div className="w-20 h-20 bg-accent-green/10 border border-accent-green/30 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:bg-accent-green/20 transition-all">
+                    <service.icon className="w-10 h-10 text-accent-green" />
                   </div>
-                  <h4 className="text-xl font-bold text-primary-blue font-barlow uppercase mb-4">
+                  <h4 className="text-xl font-bold text-white mb-4 uppercase">
                     {service.title}
                   </h4>
-                  <p className="text-gray-700 font-dm-sans leading-relaxed">
+                  <p className="text-white/70 leading-relaxed">
                     {service.description}
                   </p>
                 </CardContent>
@@ -245,15 +302,15 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="bg-white border-2 border-accent-red rounded p-8">
-            <h4 className="text-2xl font-bold text-primary-blue font-barlow uppercase mb-6 text-center">
+          <div className="bg-dark-secondary border border-white/10 rounded-2xl p-8">
+            <h4 className="text-2xl font-bold text-white mb-8 text-center uppercase">
               Service Coverage Areas
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {serviceAreas.map((area, index) => (
                 <div
                   key={index}
-                  className="bg-accent-red text-white font-bold py-3 px-4 rounded text-center uppercase font-barlow"
+                  className="bg-accent-green/10 border border-accent-green/30 text-accent-green font-semibold py-3 px-4 rounded-lg text-center uppercase hover:bg-accent-green/20 transition-all"
                 >
                   {area}
                 </div>
@@ -263,63 +320,80 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Large Typography Section 2 */}
+      <section className="py-20 overflow-hidden">
+        <div className="text-center">
+          <h2 className="text-6xl md:text-[120px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50 leading-none mb-4">
+            Digital
+          </h2>
+          <h3 className="text-6xl md:text-[120px] font-bold text-white leading-none">
+            solutions
+          </h3>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-accent-red">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-white">
-              <h3 className="text-4xl font-bold font-barlow uppercase mb-4">
-                Get A Free Quote
-              </h3>
-              <p className="font-dm-sans text-lg">
-                Contact us today for competitive rates and reliable transport
-                solutions across India.
-              </p>
-            </div>
+      <section className="py-32 bg-dark-secondary">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h3 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            Get Ready to
+            <span className="block text-accent-green">Grow Your Business</span>
+          </h3>
+          <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
+            Contact us today for competitive rates and reliable transport
+            solutions across India.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               onClick={() => handleCallNow("7006069502")}
-              className="bg-white text-accent-red hover:bg-gray-100 font-barlow uppercase px-8 py-4 text-lg"
+              className="bg-accent-green hover:bg-accent-green/90 text-dark-primary font-semibold text-xl px-12 py-6 rounded-lg transition-all"
             >
-              Contact Us
+              <Phone className="w-6 h-6 mr-3" />
+              7006069502
+            </Button>
+            <Button
+              onClick={() => handleCallNow("8082176534")}
+              className="bg-accent-green hover:bg-accent-green/90 text-dark-primary font-semibold text-xl px-12 py-6 rounded-lg transition-all"
+            >
+              <Phone className="w-6 h-6 mr-3" />
+              8082176534
             </Button>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-32 bg-white">
+      <section id="contact" className="py-32">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="text-accent-red font-barlow font-bold uppercase text-sm tracking-wider">
-              - 03
+          <div className="text-center mb-20">
+            <span className="text-accent-green text-lg font-semibold tracking-wider uppercase mb-4 block">
+              What we do
             </span>
-            <h3 className="text-5xl font-bold text-primary-blue font-barlow uppercase mb-8">
-              Contact
-            </h3>
+            <h3 className="text-5xl font-bold text-white mb-8">Contact</h3>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
-            <div className="space-y-8">
+            <div className="space-y-12">
               <div>
-                <h4 className="text-2xl font-bold text-primary-blue font-barlow uppercase mb-6">
+                <h4 className="text-2xl font-bold text-white mb-8 uppercase">
                   Our Offices
                 </h4>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-accent-red pl-6">
-                    <h5 className="font-bold text-primary-blue font-barlow uppercase mb-2">
+                <div className="space-y-8">
+                  <div className="bg-dark-secondary border border-white/10 rounded-xl p-6 hover:border-accent-green/30 transition-all">
+                    <h5 className="font-bold text-accent-green text-lg mb-3 uppercase">
                       H.O
                     </h5>
-                    <p className="text-gray-700 font-dm-sans">
+                    <p className="text-white/80 leading-relaxed">
                       Canal Road, Ward No. 8, Rajive Colony,
                       <br />
                       Bari Brahmana, Samba, Jammu - 181133
                     </p>
                   </div>
-                  <div className="border-l-4 border-accent-red pl-6">
-                    <h5 className="font-bold text-primary-blue font-barlow uppercase mb-2">
+                  <div className="bg-dark-secondary border border-white/10 rounded-xl p-6 hover:border-accent-green/30 transition-all">
+                    <h5 className="font-bold text-accent-green text-lg mb-3 uppercase">
                       B.O
                     </h5>
-                    <p className="text-gray-700 font-dm-sans">
+                    <p className="text-white/80 leading-relaxed">
                       NH-44, Nealki, Sarore Adda,
                       <br />
                       Bari Brahmana, Jammu-181133
@@ -329,69 +403,69 @@ const Index = () => {
               </div>
             </div>
 
-            <div>
-              <h4 className="text-2xl font-bold text-primary-blue font-barlow uppercase mb-6">
-                Message Us
+            <div className="bg-dark-secondary border border-white/10 rounded-2xl p-8">
+              <h4 className="text-2xl font-bold text-white mb-8 uppercase">
+                Drop Us a Message
               </h4>
               <div className="space-y-6">
                 <div className="space-y-4">
                   <input
                     type="text"
                     placeholder="Name*"
-                    className="w-full p-4 border-2 border-gray-200 rounded font-dm-sans focus:border-accent-red outline-none transition-colors"
+                    className="w-full p-4 bg-dark-primary border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:border-accent-green outline-none transition-colors"
                   />
                   <input
                     type="email"
                     placeholder="Email*"
-                    className="w-full p-4 border-2 border-gray-200 rounded font-dm-sans focus:border-accent-red outline-none transition-colors"
+                    className="w-full p-4 bg-dark-primary border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:border-accent-green outline-none transition-colors"
                   />
                   <input
                     type="text"
                     placeholder="Subject*"
-                    className="w-full p-4 border-2 border-gray-200 rounded font-dm-sans focus:border-accent-red outline-none transition-colors"
+                    className="w-full p-4 bg-dark-primary border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:border-accent-green outline-none transition-colors"
                   />
                   <textarea
                     placeholder="Message*"
                     rows={6}
-                    className="w-full p-4 border-2 border-gray-200 rounded font-dm-sans focus:border-accent-red outline-none transition-colors resize-none"
+                    className="w-full p-4 bg-dark-primary border border-white/20 rounded-lg text-white placeholder:text-white/50 focus:border-accent-green outline-none transition-colors resize-none"
                   ></textarea>
                 </div>
                 <Button
                   onClick={handleEmail}
-                  className="bg-accent-red hover:bg-red-700 text-white font-barlow uppercase px-8 py-4"
+                  className="w-full bg-accent-green hover:bg-accent-green/90 text-dark-primary font-semibold text-lg py-4 rounded-lg transition-all"
                 >
-                  Submit
+                  Connect with KC Transport today
                 </Button>
 
-                <div className="pt-6 border-t border-gray-200">
-                  <h5 className="font-bold text-primary-blue font-barlow uppercase mb-4">
+                <div className="pt-8 border-t border-white/10">
+                  <h5 className="font-bold text-white text-lg mb-6 uppercase">
                     Contact Person: Ankit
                   </h5>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-accent-red" />
-                      <div className="space-x-4">
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-4">
+                      <Phone className="w-6 h-6 text-accent-green" />
+                      <div className="flex flex-wrap gap-4">
                         <Button
                           variant="link"
-                          className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red"
+                          className="text-white p-0 h-auto hover:text-accent-green transition-colors text-lg"
                           onClick={() => handleCallNow("7006069502")}
                         >
                           7006069502
                         </Button>
                         <Button
                           variant="link"
-                          className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red"
+                          className="text-white p-0 h-auto hover:text-accent-green transition-colors text-lg"
                           onClick={() => handleCallNow("8082176534")}
                         >
                           8082176534
                         </Button>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <Mail className="w-5 h-5 text-accent-red" />
+                    <div className="flex items-center space-x-4">
+                      <Mail className="w-6 h-6 text-accent-green" />
                       <Button
                         variant="link"
-                        className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red"
+                        className="text-white p-0 h-auto hover:text-accent-green transition-colors text-lg"
                         onClick={handleEmail}
                       >
                         kctransport786@gmail.com
@@ -406,15 +480,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-primary-blue border-t-2 border-accent-red">
+      <footer className="py-12 bg-dark-secondary border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center text-white">
-            <p className="font-dm-sans">
-              Copyright © 2024 KC Transport. All rights reserved.
+          <div className="text-center text-white/80">
+            <p className="text-lg mb-2">
+              © 2024 KC Transport. All Rights Reserved.
             </p>
-            <p className="font-dm-sans text-sm text-white/80 mt-2">
-              Powered by KC Transport Services
-            </p>
+            <p className="text-sm">Powered by KC Transport Services</p>
           </div>
         </div>
       </footer>
