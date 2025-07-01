@@ -21,15 +21,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 
 const Index = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % 5);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   const handleCallNow = (phone: string) => {
     window.open(`tel:${phone}`, "_self");
   };
@@ -79,14 +70,6 @@ const Index = () => {
     "All Over India",
   ];
 
-  const fleetImages = [
-    "/truck1.jpg",
-    "/truck2.jpg",
-    "/truck1.jpg",
-    "/truck2.jpg",
-    "/truck1.jpg",
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Fixed Header */}
@@ -125,12 +108,6 @@ const Index = () => {
                 className="text-white hover:text-accent-red transition-colors font-barlow uppercase"
               >
                 Services
-              </a>
-              <a
-                href="#fleet"
-                className="text-white hover:text-accent-red transition-colors font-barlow uppercase"
-              >
-                Fleet
               </a>
               <a
                 href="#contact"
@@ -293,41 +270,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Fleet Section */}
-      <section id="fleet" className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="text-accent-red font-barlow font-bold uppercase text-sm tracking-wider">
-              - 03
-            </span>
-            <h3 className="text-5xl font-bold text-primary-blue font-barlow uppercase mb-8">
-              Our Fleet
-            </h3>
-          </div>
-
-          <div className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              {fleetImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`transition-all duration-500 ${
-                    index === activeSlide
-                      ? "md:col-span-2 h-64"
-                      : "h-48 opacity-70 hover:opacity-100"
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt={`Fleet ${index + 1}`}
-                    className="w-full h-full object-cover rounded"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-accent-red">
         <div className="max-w-7xl mx-auto px-4">
@@ -356,7 +298,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-accent-red font-barlow font-bold uppercase text-sm tracking-wider">
-              - 04
+              - 03
             </span>
             <h3 className="text-5xl font-bold text-primary-blue font-barlow uppercase mb-8">
               Contact
