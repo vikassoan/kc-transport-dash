@@ -7,13 +7,6 @@ import {
   Shield,
   Clock,
   Users,
-  Plane,
-  Ship,
-  Train,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -331,26 +324,6 @@ const Index = () => {
                       <br />
                       Bari Brahmana, Jammu-181133
                     </p>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-bold text-primary-blue font-barlow uppercase mb-4">
-                  Follow Us
-                </h4>
-                <div className="flex space-x-4">
-                  <div className="w-12 h-12 bg-primary-blue rounded flex items-center justify-center hover:bg-accent-red transition-colors cursor-pointer">
-                    <Facebook className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="w-12 h-12 bg-primary-blue rounded flex items-center justify-center hover:bg-accent-red transition-colors cursor-pointer">
-                    <Twitter className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="w-12 h-12 bg-primary-blue rounded flex items-center justify-center hover:bg-accent-red transition-colors cursor-pointer">
-                    <Linkedin className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="w-12 h-12 bg-primary-blue rounded flex items-center justify-center hover:bg-accent-red transition-colors cursor-pointer">
-                    <Instagram className="w-6 h-6 text-white" />
                   </div>
                 </div>
               </div>
