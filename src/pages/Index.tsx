@@ -43,32 +43,46 @@ const Index = () => {
       icon: Truck,
       title: "Road Freight",
       description:
-        "Daily cargo transport services across Punjab, Haryana, Chandigarh, Delhi, UP, Uttaranchal, Bihar, Kolkata, Assam, Gujarat, and all over India.",
+        "Daily cargo transport services across Punjab, Haryana, Chandigarh, Delhi, UP, Uttaranchal, Bihar, Kolkata, Assam, Gujarat, and all over India. Full truck and part-load options available.",
     },
     {
-      icon: Plane,
-      title: "Express Delivery",
+      icon: Shield,
+      title: "Fleet Management",
       description:
-        "Fast delivery solutions for urgent cargo requirements with time-critical shipments across major Indian cities.",
+        "As fleet owners, we provide direct handling of your cargo with our own vehicles. No middlemen, competitive rates, and guaranteed service quality.",
     },
     {
-      icon: Ship,
-      title: "Container Transport",
+      icon: Clock,
+      title: "On Time Delivery",
       description:
-        "Full container load (FCL) and less than container load (LCL) services with secure handling and tracking.",
+        "Reliable and punctual delivery services ensuring your cargo reaches its destination safely and on schedule across all major routes in India.",
     },
     {
-      icon: Train,
-      title: "Rail Freight",
+      icon: Users,
+      title: "Direct Handling",
       description:
-        "Cost-effective rail transport solutions for bulk cargo across India's extensive railway network.",
+        "Direct handling by fleet owners eliminates middlemen, providing cost-effective and efficient transport services with transparent pricing.",
     },
   ];
 
+  const serviceAreas = [
+    "Punjab",
+    "Haryana",
+    "Chandigarh",
+    "Delhi",
+    "UP",
+    "Uttaranchal",
+    "Bihar",
+    "Kolkata",
+    "Assam",
+    "Gujarat",
+    "All Over India",
+  ];
+
   const stats = [
-    { label: "Delivered Packages", value: "15000+" },
+    { label: "Delivered Packages", value: "3500+" },
     { label: "Cities Covered", value: "50+" },
-    { label: "Satisfied Clients", value: "2500+" },
+    { label: "Satisfied Clients", value: "1000+" },
     { label: "Years Experience", value: "15+" },
   ];
 
@@ -82,20 +96,20 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "Ankit Sharma",
-      title: "Logistics Manager - Delhi Traders",
+      name: "Rajesh Singh",
+      title: "Business Owner - Delhi",
       quote:
-        "KC Transport has been our reliable partner for over 5 years. Their on-time delivery and safe handling of goods has helped us maintain our customer satisfaction. Highly recommended!",
+        "KC Transport has been our reliable partner for cargo transport. Their on-time delivery and safe handling of goods has helped us maintain our customer satisfaction. Highly recommended!",
     },
     {
-      name: "Priya Gupta",
-      title: "Supply Chain Head - Punjab Industries",
+      name: "Mandeep Kaur",
+      title: "Trader - Punjab",
       quote:
         "The direct handling approach by KC Transport eliminates middlemen and provides us with cost-effective solutions. Their fleet is well-maintained and drivers are professional.",
     },
     {
-      name: "Rajesh Kumar",
-      title: "Operations Director - North India Exports",
+      name: "Suresh Kumar",
+      title: "Exporter - Gujarat",
       quote:
         "From Punjab to Gujarat, KC Transport covers all our routes efficiently. Their transparent pricing and excellent customer service makes them our preferred transport partner.",
     },
@@ -213,9 +227,9 @@ const Index = () => {
               </h3>
               <p className="text-gray-700 font-dm-sans text-lg leading-relaxed mb-6">
                 KC TRANSPORT has been providing reliable logistics solutions
-                across India since 2008. As fleet owners and commission agents,
-                we ensure your cargo reaches its destination safely and on time.
-                Our direct handling approach eliminates middlemen, providing you
+                across India. As fleet owners and commission agents, we ensure
+                your cargo reaches its destination safely and on time. Our
+                direct handling approach eliminates middlemen, providing you
                 with cost-effective and efficient transport services.
               </p>
               <p className="text-2xl font-bold text-primary-blue font-barlow uppercase mb-8">
@@ -279,7 +293,7 @@ const Index = () => {
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -298,6 +312,22 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="bg-white border-2 border-accent-red rounded p-8">
+            <h4 className="text-2xl font-bold text-primary-blue font-barlow uppercase mb-6 text-center">
+              Service Coverage Areas
+            </h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {serviceAreas.map((area, index) => (
+                <div
+                  key={index}
+                  className="bg-accent-red text-white font-bold py-3 px-4 rounded text-center uppercase font-barlow"
+                >
+                  {area}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -533,13 +563,27 @@ const Index = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5 text-accent-red" />
-                      <Button
-                        variant="link"
-                        className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red"
-                        onClick={handleEmail}
-                      >
-                        kctransport786@gmail.com
-                      </Button>
+                      <div className="space-y-1">
+                        <Button
+                          variant="link"
+                          className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red block"
+                          onClick={handleEmail}
+                        >
+                          kctransport786@gmail.com
+                        </Button>
+                        <Button
+                          variant="link"
+                          className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red block"
+                          onClick={() =>
+                            window.open(
+                              "mailto:ankitchadgal290@gmail.com",
+                              "_self",
+                            )
+                          }
+                        >
+                          ankitchadgal290@gmail.com
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
