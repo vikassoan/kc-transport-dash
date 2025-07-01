@@ -79,40 +79,12 @@ const Index = () => {
     "All Over India",
   ];
 
-  const stats = [
-    { label: "Delivered Packages", value: "3500+" },
-    { label: "Cities Covered", value: "50+" },
-    { label: "Satisfied Clients", value: "1000+" },
-    { label: "Years Experience", value: "15+" },
-  ];
-
   const fleetImages = [
     "/truck1.jpg",
     "/truck2.jpg",
     "/truck1.jpg",
     "/truck2.jpg",
     "/truck1.jpg",
-  ];
-
-  const testimonials = [
-    {
-      name: "Rajesh Singh",
-      title: "Business Owner - Delhi",
-      quote:
-        "KC Transport has been our reliable partner for cargo transport. Their on-time delivery and safe handling of goods has helped us maintain our customer satisfaction. Highly recommended!",
-    },
-    {
-      name: "Mandeep Kaur",
-      title: "Trader - Punjab",
-      quote:
-        "The direct handling approach by KC Transport eliminates middlemen and provides us with cost-effective solutions. Their fleet is well-maintained and drivers are professional.",
-    },
-    {
-      name: "Suresh Kumar",
-      title: "Exporter - Gujarat",
-      quote:
-        "From Punjab to Gujarat, KC Transport covers all our routes efficiently. Their transparent pricing and excellent customer service makes them our preferred transport partner.",
-    },
   ];
 
   return (
@@ -161,12 +133,6 @@ const Index = () => {
                 Fleet
               </a>
               <a
-                href="#testimonials"
-                className="text-white hover:text-accent-red transition-colors font-barlow uppercase"
-              >
-                Testimonials
-              </a>
-              <a
                 href="#contact"
                 className="text-white hover:text-accent-red transition-colors font-barlow uppercase"
               >
@@ -199,9 +165,8 @@ const Index = () => {
               <span className="block">Services</span>
             </h2>
             <p className="text-xl text-white/90 font-dm-sans mb-8 leading-relaxed">
-              Daily cargo transport services across major states in India.
-              Direct handling by fleet owners with full truck and part-load
-              options.
+              Daily Service for: Punjab, Haryana, Chandigarh, Delhi, UP,
+              Uttaranchal, Bihar, Kolkata, Assam, Gujarat & All over India.
             </p>
             <Button
               onClick={handleEmail}
@@ -226,14 +191,10 @@ const Index = () => {
                 About Us
               </h3>
               <p className="text-gray-700 font-dm-sans text-lg leading-relaxed mb-6">
-                KC TRANSPORT has been providing reliable logistics solutions
-                across India. As fleet owners and commission agents, we ensure
-                your cargo reaches its destination safely and on time. Our
-                direct handling approach eliminates middlemen, providing you
-                with cost-effective and efficient transport services.
-              </p>
-              <p className="text-2xl font-bold text-primary-blue font-barlow uppercase mb-8">
-                We Make Cargo Transport Easy!
+                KC TRANSPORT - Transport Contractor & Commission Agents
+                providing daily service for Punjab, Haryana, Chandigarh, Delhi,
+                UP, Uttaranchal, Bihar, Kolkata, Assam, Gujarat & All over
+                India.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex items-center space-x-3">
@@ -332,22 +293,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-accent-red">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center text-white">
-                <p className="font-dm-sans text-sm uppercase tracking-wider mb-2">
-                  {stat.label}
-                </p>
-                <p className="text-4xl font-bold font-barlow">{stat.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Fleet Section */}
       <section id="fleet" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -406,46 +351,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="text-accent-red font-barlow font-bold uppercase text-sm tracking-wider">
-              - 04
-            </span>
-            <h3 className="text-5xl font-bold text-primary-blue font-barlow uppercase mb-8">
-              Testimonials
-            </h3>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white border-none shadow-lg">
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <h4 className="font-bold text-primary-blue font-barlow text-lg">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-gray-600 font-dm-sans text-sm">
-                      {testimonial.title}
-                    </p>
-                  </div>
-                  <p className="text-gray-700 font-dm-sans leading-relaxed italic">
-                    "{testimonial.quote}"
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-accent-red font-barlow font-bold uppercase text-sm tracking-wider">
-              - 05
+              - 04
             </span>
             <h3 className="text-5xl font-bold text-primary-blue font-barlow uppercase mb-8">
               Contact
@@ -461,22 +372,22 @@ const Index = () => {
                 <div className="space-y-6">
                   <div className="border-l-4 border-accent-red pl-6">
                     <h5 className="font-bold text-primary-blue font-barlow uppercase mb-2">
-                      Head Office
+                      H.O
                     </h5>
                     <p className="text-gray-700 font-dm-sans">
                       Canal Road, Ward No. 8, Rajive Colony,
                       <br />
-                      Bari Brahmana, Samba, Jammu – 181133
+                      Bari Brahmana, Samba, Jammu - 181133
                     </p>
                   </div>
                   <div className="border-l-4 border-accent-red pl-6">
                     <h5 className="font-bold text-primary-blue font-barlow uppercase mb-2">
-                      Branch Office
+                      B.O
                     </h5>
                     <p className="text-gray-700 font-dm-sans">
                       NH-44, Nealki, Sarore Adda,
                       <br />
-                      Bari Brahmana, Jammu – 181133
+                      Bari Brahmana, Jammu-181133
                     </p>
                   </div>
                 </div>
@@ -563,27 +474,13 @@ const Index = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5 text-accent-red" />
-                      <div className="space-y-1">
-                        <Button
-                          variant="link"
-                          className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red block"
-                          onClick={handleEmail}
-                        >
-                          kctransport786@gmail.com
-                        </Button>
-                        <Button
-                          variant="link"
-                          className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red block"
-                          onClick={() =>
-                            window.open(
-                              "mailto:ankitchadgal290@gmail.com",
-                              "_self",
-                            )
-                          }
-                        >
-                          ankitchadgal290@gmail.com
-                        </Button>
-                      </div>
+                      <Button
+                        variant="link"
+                        className="text-primary-blue font-dm-sans p-0 h-auto hover:text-accent-red"
+                        onClick={handleEmail}
+                      >
+                        kctransport786@gmail.com
+                      </Button>
                     </div>
                   </div>
                 </div>
