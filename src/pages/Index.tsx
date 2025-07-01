@@ -180,10 +180,10 @@ const Index = () => {
       {/* Large Typography Section */}
       <section className="py-20 overflow-hidden">
         <div className="text-center">
-          <h2 className="text-8xl md:text-[160px] font-bold text-white leading-none mb-4">
+            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white leading-none mb-4 break-words max-w-full overflow-hidden text-balance">
             TRANSPORT
-          </h2>
-          <h3 className="text-6xl md:text-[120px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-green to-accent-green/50 leading-none">
+            </h2>
+          <h3 className="text-3xl sm:text-5xl md:text-6xl md:text-[120px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-green to-accent-green/50 leading-none">
             SOLUTIONS
           </h3>
         </div>
@@ -298,7 +298,7 @@ const Index = () => {
       {/* Large Typography Section 2 */}
       <section className="py-20 overflow-hidden">
         <div className="text-center">
-          <h2 className="text-6xl md:text-[120px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50 leading-none mb-4">
+          <h2 className="text-6xl md:text-[120px] font-bold text-accent-green leading-[1.15] mb-4">
             Digital
           </h2>
           <h3 className="text-6xl md:text-[120px] font-bold text-white leading-none">
