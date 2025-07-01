@@ -243,31 +243,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-32">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            {[
-              { number: "500+", label: "PROJECTS", accent: true },
-              { number: "15+", label: "YEARS" },
-              { number: "50+", label: "CITIES" },
-            ].map((stat, index) => (
-              <div key={index} className="space-y-4">
-                <CheckCircle className="w-8 h-8 text-accent-green mx-auto mb-4" />
-                <div
-                  className={`text-8xl font-bold ${stat.accent ? "text-accent-green" : "text-white"}`}
-                >
-                  {stat.number}
-                </div>
-                <div className="text-white/80 text-lg tracking-wider font-semibold">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section id="services" className="py-32 bg-dark-secondary/30">
         <div className="max-w-7xl mx-auto px-4">
