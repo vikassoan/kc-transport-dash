@@ -71,7 +71,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className="w-[3rem] overflow-hidden rounded-lg">
-                <img className="w-full" src="/logo.png" alt="logo" />
+                <img className="w-full" src="/kclogo.png" alt="logo" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-white uppercase tracking-wider">
