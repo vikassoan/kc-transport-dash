@@ -166,9 +166,9 @@ const Index = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-accent-green/20 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute inset-0 rounded-full blur-3xl"></div>
               <img
-                src="/truck2.jpg"
+                src="/truck2.avif"
                 alt="KC Transport Fleet"
                 className="relative z-10 w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
@@ -194,10 +194,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-accent-green/10 rounded-full blur-2xl"></div>
-              <div className="relative bg-dark-secondary rounded-2xl p-8 border border-white/10">
+              <div className="absolute inset-0 bg-accent-green/10 rounded-full blur-2xl animate-pulse"></div>
+              <div className="relative rounded-2xl p-8">
                 <img
-                  src="/truck2.jpg"
+                  src="/truck3.avif"
                   alt="KC Transport Fleet"
                   className="w-full h-80 object-cover rounded-xl"
                 />
